@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="UWF.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF252525">
+        <ComboBox Margin="50,85,0,0" Width="260" Height="47" FontSize="15" ItemsSource="{Binding userList, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Padding="0">
+                        <TextBlock Margin="5" Text="{Binding names, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="50,60,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,152,0,0" Text="Selected User : " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+    </Grid>
+</Page>
